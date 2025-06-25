@@ -10,10 +10,10 @@ const supportedLocales =[
 const rtlLocales = ["ar", "he"];
  
 export async function generateStaticParams() {
-  return supportedLocales.map((locale) => ({ locale }));
+  return supportedLocales.map((locale) => ({locale}));
 }
  
-export default function LocaleLayout({ children, params }) {
+export default function LocaleLayout({children,params}) {
   const { locale } = params;
  
   if (!supportedLocales.includes(locale)) {

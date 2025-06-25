@@ -5,9 +5,10 @@ import { useTranslation } from "react-i18next";
 import { useParams } from "next/navigation";
 import "@/lib/i18n";
 import LanguageSwitcher from "../../components/language.jsx";
+import FullReport from "@/components/fullReport/fullReport.jsx";
  
 export default function Page() {
-  const { t, i18n } = useTranslation("translation");
+  const { t, i18n } = useTranslation();
   const { locale } = useParams();
   const [ready, setReady] = useState(false);
  
@@ -28,6 +29,7 @@ export default function Page() {
     <div className="text-center mt-10">
       <h1>{t("BANNER_TITLE")}</h1>
       <LanguageSwitcher/>
+      <FullReport/>
     </div>
   );
 }
